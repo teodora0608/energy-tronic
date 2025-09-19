@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+/* Ascunde complet scrollbarul orizontal (Chrome/Safari/Edge/Firefox/IE) */
+.scrollbar-hide {
+  -ms-overflow-style: none;    /* IE/Edge */
+  scrollbar-width: none;       /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+/* (opțional) fade pe margini – comentează dacă vrei clean total */
+/*
+.mask-edges {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, black 16px, black calc(100% - 16px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, black 16px, black calc(100% - 16px), transparent 100%);
+}
+*/
