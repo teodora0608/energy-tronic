@@ -83,23 +83,24 @@ Mensaje: ${formData.message}`
     <div className="min-h-screen bg-white text-slate-800">
       <Navbar />
 
-      {/* dark hero band with gradient title */}
-      <section className="relative pt-24 pb-14 bg-[#0F172A]">
-        <div className="absolute inset-0 bg-[radial-gradient(600px_circle_at_10%_10%,rgba(76,175,80,.08),transparent_40%),radial-gradient(800px_circle_at_90%_0,rgba(250,204,21,.08),transparent_45%)]" />
+      {/* HERO – alb, cu “Contacta” în gradient verde→galben */}
+      <section className="relative pt-24 pb-14 bg-white">
         <div className="max-w-6xl mx-auto px-4 md:px-6 text-center relative">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-            <span className="bg-gradient-to-r from-[#4CAF50] to-[#FACC15] bg-clip-text text-transparent">Contacta</span>{" "}
-            <span className="text-white">con Nosotros</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-slate-900">
+            <span className="bg-gradient-to-r from-[#4CAF50] to-[#FACC15] bg-clip-text text-transparent">
+              Contacta
+            </span>{" "}
+            <span className="text-slate-900">con Nosotros</span>
           </h1>
-          <p className="text-base md:text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
             Estamos aquí para ayudarte con tu proyecto eléctrico. Contáctanos y recibe una respuesta en menos de 24 horas.
           </p>
         </div>
       </section>
 
-      {/* cards + form (page background is white) */}
+      {/* CARDS + FORM */}
       <section className="max-w-6xl mx-auto px-4 md:px-6 py-14">
-        {/* dark cards on white */}
+        {/* CARDS – albe cu linie sus în gradient (verde→galben) */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
             { title: "Teléfono", body: "+34 601 274 018", actionLabel: "Llamar ahora", href: "tel:+34601274018", Icon: PhoneIcon },
@@ -109,22 +110,25 @@ Mensaje: ${formData.message}`
           ].map(({ title, body, actionLabel, href, Icon, pill }, i) => (
             <div
               key={i}
-              className="relative rounded-2xl p-6 bg-[#0B1220] text-slate-200 ring-1 ring-white/5 shadow-lg
-                         before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-gradient-to-r
-                         before:from-[#4CAF50] before:to-[#FACC15] before:rounded-t-2xl"
+              className="relative rounded-2xl p-6 bg-white text-slate-800 ring-1 ring-slate-200 shadow-sm hover:shadow-md transition-shadow
+                         before:absolute before:inset-x-0 before:top-0 before:h-1
+                         before:bg-gradient-to-r before:from-[#4CAF50] before:to-[#FACC15]
+                         before:rounded-t-2xl"
             >
               <div className="w-12 h-12 mx-auto mb-4 bg-[#4CAF50] text-white rounded-full flex items-center justify-center">
                 <Icon />
               </div>
               <h3 className="font-semibold text-center mb-1">{title}</h3>
-              <p className="text-slate-300 text-center break-words">{body}</p>
+              <p className="text-slate-600 text-center break-words">{body}</p>
+
               {pill ? (
                 <span className="mt-3 block w-fit mx-auto px-3 py-1 rounded-full bg-[#4CAF50] text-white text-xs font-semibold">
                   {pill}
                 </span>
               ) : null}
+
               {href && actionLabel ? (
-                <a href={href} className="block text-center mt-3 text-[#86EFAC] hover:text-[#BBF7D0] transition-colors">
+                <a href={href} className="block text-center mt-3 text-[#4CAF50] hover:text-[#16A34A] transition-colors">
                   {actionLabel}
                 </a>
               ) : null}
@@ -132,7 +136,7 @@ Mensaje: ${formData.message}`
           ))}
         </div>
 
-        {/* form + sidebar (both WHITE now) */}
+        {/* FORM + SIDEBAR */}
         <div className="grid lg:grid-cols-5 gap-10">
           {/* form */}
           <div className="lg:col-span-3 rounded-2xl p-8 bg-white ring-1 ring-slate-200 shadow-sm">
@@ -232,7 +236,7 @@ Mensaje: ${formData.message}`
             </form>
           </div>
 
-          {/* right column (white too) */}
+          {/* right column */}
           <div className="lg:col-span-2 space-y-8">
             <div className="rounded-2xl p-8 bg-white ring-1 ring-slate-200 shadow-sm">
               <h3 className="text-xl font-bold mb-4 text-slate-900">¿Por qué elegirnos?</h3>
@@ -260,9 +264,12 @@ Mensaje: ${formData.message}`
       <Footer />
       <WhatsAppButton />
 
-      {/* mobile sticky — phone only */}
+      {/* mobile sticky – păstrat întunecat pentru contrast */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#0F172A]/95 backdrop-blur-md border-t border-white/10 p-4 z-50">
-        <a href="tel:+34601274018" className="w-full bg-[#22C55E] text-white py-3 px-4 rounded-xl font-semibold text-center flex items-center justify-center gap-2 hover:bg-[#16A34A] transition">
+        <a
+          href="tel:+34601274018"
+          className="w-full bg-[#22C55E] text-white py-3 px-4 rounded-xl font-semibold text-center flex items-center justify-center gap-2 hover:bg-[#16A34A] transition"
+        >
           <PhoneIcon />
           Llamar
         </a>
