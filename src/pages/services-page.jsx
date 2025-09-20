@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import WhatsAppButton from "../components/WhatsAppButton";
+import WhatsAppButton from "../components/whatsapp-button";
 import ChipsNav from "../components/chips-nav";
 
 /* ===== date pentru cele 6 servicii ===== */
