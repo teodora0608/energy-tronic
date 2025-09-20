@@ -137,8 +137,7 @@ export default function HomePage() {
     <span className="text-white drop-shadow-lg">Seguras y Eficientes</span>
   </h1>
             <p className="text-base md:text-xl text-white/90 leading-relaxed mb-6 md:mb-8 drop-shadow-lg">
-              Instalaciones profesionales, fotovoltaica y automatización para viviendas y negocios con más de 10 años de
-              experiencia.
+          Instalaciones profesionales para viviendas y empresas
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
